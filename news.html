@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deccan Hareld</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        #fPage{
+            width: 80%;
+            border: 1px solid red;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        #col1{
+            width: 70%;
+            border: 1px solid blue;
+        }
+        #col2{
+            width: 25%;
+            border: 1px solid green;
+        }
+        .newsImg{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="fPage">
+        <div id="col1">
+            <div id="titleAuthor">
+                <div id="title"></div>
+                <div id="authorSocial">
+                    <div id="author"></div>
+                    <div id="social"></div>
+                </div>
+            </div>
+    
+            <div id="container">
+                <div id="img"></div>
+                <div id="content"></div>
+            </div>
+        </div>
+        <div id="col2">
+
+        </div>
+    </div>
+</body>
+<script>
+    let newsData = JSON.parse(localStorage.getItem("newsData"))
+    
+    let append = (data) => {
+        console.log(data)
+        let title = document.createElement("h1")
+        title.innerText = data.title
+
+        let des = document.createElement("p")
+        des.innerText = data.description
+
+        let date = document.createElement("p")
+        date.innerText = data.publishedAt
+
+        let img = document.createElement("img")
+        img.src = data.urlToImage
+        img.setAttribute("class", 'newsImg')
+
+        let content = document.createElement("p")
+        content.innerText = data.content
+
+        let readMore = document.createElement("p")
+        readMore.innerText = "Read More"
+        readMore.addEventListener('click', function(){
+            readMoreFun(data)
+        })
+
+        document.querySelector("#title").append(title)
+        document.querySelector("#author").append(des, date)
+        document.querySelector("#img").append(img)
+        document.querySelector("#content").append( des, content, readMore)
+    }
+
+    function readMoreFun(el){
+        window.location.href = el.url
+    }
+    append(newsData)
+</script>
+</html>
