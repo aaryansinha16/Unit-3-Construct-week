@@ -22,8 +22,16 @@ let append = (data, container) => {
 
         titlePara.append(title)
         container.append( titlePara)
+        container.addEventListener("click", function(){
+            fstNewsFun(data[0])
+        })
+
+        function fstNewsFun(el){
+            localStorage.setItem('newsData', JSON.stringify(data[0]))
+            window.location.href = 'news.html'
+        }
     }
-    else if(container.id == 'container-3' ){ //|| container.id == 'container-20'
+    else if(container.id == 'container-3' ){ 
         let img = document.createElement("img")
         img.src = 'https://etimg.etb2bimg.com/photo/78762613.cms'
 
@@ -84,9 +92,21 @@ let append = (data, container) => {
                 arr.push(data[i])
             }
         }
-        else if(container.id == 'smallNews3' || container.id == 'container-14' || container.id == 'container-15'){
+        else if(container.id == 'smallNews3'){
             var arr = []
             for(var i = 24; i<25; i++){
+                arr.push(data[i])
+            }
+        }
+        else if( container.id == 'container-14' ){
+            arr = []
+            for(var i = 27; i<28; i++){
+                arr.push(data[i])
+            }
+        }
+        else if(container.id == 'container-15'){
+            arr = []
+            for(var i = 28; i<29; i++){
                 arr.push(data[i])
             }
         }
@@ -101,9 +121,16 @@ let append = (data, container) => {
             let box = document.createElement("div")
             box.setAttribute("class", 'newsDiv')
     
-            let img = document.createElement("img")
-            img.src = elem.urlToImage
-            img.addEventListener('click', imgFun)
+            var img = document.createElement("img")
+            img.addEventListener('click', function(){
+                newsFun(elem)
+            })
+            if(elem.urlToImage == null){
+                img.src == `https://demofree.sirv.com/nope-not-here.jpg`
+            }
+            else{
+                img.src = elem.urlToImage
+            }
     
             let textBox = document.createElement("div")
             textBox.setAttribute("class", 'textBox')
@@ -123,10 +150,6 @@ let append = (data, container) => {
             box.append(img, textBox)
             container.append(box)
         })
-    
-        function imgFun(){
-            window.location.href = 'google.com'
-        }
 
         function newsFun(el){
             localStorage.setItem("newsData", JSON.stringify(el))

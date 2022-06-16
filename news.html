@@ -11,50 +11,170 @@
         }
         #fPage{
             width: 80%;
-            border: 1px solid red;
             margin: auto;
-            display: flex;
-            justify-content: center;
+
             gap: 15px;
         }
+        .columns{
+            display: flex;
+            margin-top: 40px;
+        }
         #col1{
-            width: 70%;
-            border: 1px solid blue;
+            width: 65%;
         }
         #col2{
-            width: 25%;
-            border: 1px solid green;
+            width: 35%;
         }
         .newsImg{
+            width: 80%;
+            margin-left: 20px;
+        }
+        #content{
+            font-size: 17px;
+            line-height: 25px;
+            letter-spacing: 1px;
+            width: 90%;
+        }
+
+        #authorSocial{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0px 10px 0px 10px;
+            /* margin-bottom: -20px; */
+        }
+        #social{
+            display: flex;
+            gap: 5px;
+        }
+        #author{
+            font-size: 14px;
+        }
+        .readMore{
+            cursor: pointer;
+            width: 13%;
+        }
+        .readMore:hover{
+            text-decoration: underline;
+            color: purple;
+        }
+
+        #container-5{
+            background-color: #f6f6f6;
+        }
+        .newsDiv{
             width: 100%;
+            display: flex;
+            border-top: 1px solid silver;
+            gap: 10px;
+            align-items: center;
+            background-color: transparent;
+            /* padding: 0px 5px 0px 5px; */
+            /* background-color: white; */
+            /* cursor: pointer; */
+        }
+        .newsDiv img{
+            width: 35%;
+            cursor: pointer;
+        }
+        .navDiv img:hover{
+            opacity: .5;
+            background: rgb(255, 255, 255);
+        }
+        .textBox{
+            width: 70%;
+        }
+        .textBox a{
+            text-decoration: none;
+            font-size: 14px;
+            color: black;
+            font-weight: 600;
+        }
+        .textBox a:hover{
+            color: purple;
+            text-decoration: underline;
+        }
+        .hr{
+            width: 30px;
+            height: 10px;
+            background-color: teal;
+            border: none;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+        .topNews{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        .topNews h3{
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div id="fPage">
-        <div id="col1">
-            <div id="titleAuthor">
-                <div id="title"></div>
-                <div id="authorSocial">
-                    <div id="author"></div>
-                    <div id="social"></div>
+        <div id="titleAuthor">
+            <div id="title"></div>
+            <div id="authorSocial">
+                <div id="author"></div>
+                <div id="social">
+                    <div class="whatsapp">
+                        <a href="https://web.whatsapp.com/send?text=TMC%20eyeing%20to%20be%20Oppn%20unity%27s%20nucleus%20in%20Prez%20polls%20|%20Deccan%20Herald%20https://www.deccanherald.com%2Fnational%2Fnational-politics%2Ftmc-hopes-to-emerge-as-nucleus-of-opposition-unity-in-presidential-polls-1118643.html%0a%0aDownload%20DH%20App%20to%20get%20Latest%20and%20Personalised%20news%20%0ahttp://bit.do/dhapp">
+                            <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/wapp_c_new.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="facebook">
+                        <a href="https://www.facebook.com/deccanherald/">
+                            <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/fb_c_new.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="twitter">
+                        <a href="https://twitter.com/DeccanHerald?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                            <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/tw_c_new.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="pin">
+                        <a href="https://in.pinterest.com/search/pins/?q=www.deccanherald.com">
+                            <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/pin_c_new.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="linkdin">
+                        <a href="https://www.linkedin.com/company/deccanherald/">
+                            <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/linkedin_c_new.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="email">
+                        <a href="mailto:?subject=TMC%20eyeing%20to%20be%20Oppn%20unity%27s%20nucleus%20in%20Prez%20polls&body=Check%20out%20this%20link%20https://www.deccanherald.com%2Fnational%2Fnational-politics%2Ftmc-hopes-to-emerge-as-nucleus-of-opposition-unity-in-presidential-polls-1118643.html">
+                            <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/gmail_new.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="columns">
+            <div id="col1">
+                <div id="container">
+                    <div id="img"></div>
+                    <div id="content"></div>
                 </div>
             </div>
     
-            <div id="container">
-                <div id="img"></div>
-                <div id="content"></div>
+            <div id="col2">
+                <div class="topNews">
+                    <hr class="hr">
+                    <h3>Recent News</h3>
+                </div>
+                <div id="container-5"></div>
             </div>
-        </div>
-        <div id="col2">
-
         </div>
     </div>
 </body>
-<script>
+<script type="module">
     let newsData = JSON.parse(localStorage.getItem("newsData"))
     
-    let append = (data) => {
+    let appendFun = (data) => {
         console.log(data)
         let title = document.createElement("h1")
         title.innerText = data.title
@@ -77,6 +197,7 @@
         readMore.addEventListener('click', function(){
             readMoreFun(data)
         })
+        readMore.setAttribute('class', 'readMore')
 
         document.querySelector("#title").append(title)
         document.querySelector("#author").append(des, date)
@@ -87,6 +208,16 @@
     function readMoreFun(el){
         window.location.href = el.url
     }
-    append(newsData)
+    appendFun(newsData)
+
+
+    import {getData , append} from "./components/script.js"
+
+    let container1 = document.querySelector("#container-5")
+
+    let url = `https://newsapi.org/v2/top-headlines?country=us&pageSize=30&apiKey=f047a0224744446b9eb5ed3a9ae0f475`
+
+    let data = await getData(url)
+    append(data, container1)
 </script>
 </html>
