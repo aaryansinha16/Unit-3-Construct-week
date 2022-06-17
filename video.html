@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#news{
+    text-align: center;
+}
+#showVideo{
+text-align: center;
+margin-top: 50px;
+background-color:rgb(1, 1, 38);
+padding: 40px;
+}
+iframe{
+    width: 60%;
+    height: 400px;
+   
+}
+#info{
+    text-align: center;
+}
+#details{
+    margin-left: 100px;
+}
+
+#logo{
+    display: flex;
+  justify-content:flex-end;
+  margin-right: 30px;
+}
+    </style>
+</head>
+<body>
+   
+  
+    <div id="info">
+        
+      
+    </div>
+    <div id="logo">
+        <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/wapp_c_new.svg" alt="">
+        <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/fb_c_new.svg" alt="">
+        <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/tw_c_new.svg" alt="">
+        <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/pin_c_new.svg" alt="">
+        <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/linkedin_c_new.svg" alt="">
+        <img src="https://www.deccanherald.com/sites/deccanherald.com/themes/deccanherald/images/icons/gmail_new.svg" alt="">
+    </div>
+    <hr>
+    <div id="showVideo">
+        
+    </div>
+    <h3 id="about">ABOUT :</h3>
+    <div id="details">
+       
+    </div>
+   
+</body>
+</html>
+<script>
+ let video = JSON.parse(localStorage.getItem("video"));
+
+display(video)
+
+function display(data)
+{  
+    console.log(data)
+
+document.querySelector("#showVideo").innerHTML=null;
+
+let div = document.createElement("div")
+
+let iframe = document.createElement("iframe") ;
+
+// this link we get from youtube in embeded this is use to show video
+iframe.src = `https://www.youtube.com/embed/${data.videoId}?autoplay=1` ;
+
+iframe.setAttribute("allow","autoplay")
+
+let h2=document.createElement("h2");
+h2.innerText=data.title;
+
+let h3=document.createElement("p");
+h3.innerText=data.description;
+
+div.append(iframe);
+document.querySelector("#info").append(h2);
+document.querySelector("#showVideo").append(div);
+document.querySelector("#details").append(h3)
+
+}
+
+
+
+</script>
