@@ -110,14 +110,51 @@
         .topNews h3{
             margin-top: 10px;
         }
+
+
+        @media all and (min-width: 100px) and (max-width: 750px) {
+            #fPage{
+                width: 100%;
+            }
+            .columns{
+                flex-direction: column;
+                gap: 15px;
+            }
+            #col1{
+                width: 100%;
+                /* display: flex;
+                flex-direction: column;
+                justify-content: center; */
+            }
+            #img{
+                width: 100%;
+                margin: auto;
+            }
+            .newsImg, #content{
+                margin-left: 40px;
+            }
+            #container{
+                width: 100%;
+                /* display: flex;
+                flex-direction: column;
+                justify-content: center; */
+                margin: auto;
+            }
+            #col2{
+                margin: auto;
+                width: 80%;
+            }
+        }
+        /* @media all and (min-width: 100px) and (max-width: 450px) {
+            #container{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 10px;
+            }
+        } */
     </style>
 </head>
 <body>
-
-
-
-
-    
     <div id="fPage">
         <div id="titleAuthor">
             <div id="title"></div>

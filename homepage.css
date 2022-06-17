@@ -21,7 +21,7 @@
     /* grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto; */
     margin: auto;
-    width: 75%;
+    width: 80%;
     place-items: center;
     gap: 20px;
     grid-template-areas: 
@@ -85,7 +85,7 @@
     color: white;
     font-weight: 600;
 }
-#container-4, #container-7, #container-21{
+#container-4, #container-7, #container-21 , #container-16{
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -94,7 +94,7 @@
     font-size: 16px;
     font-weight: 400;
 }
-#container-4 img, #container-7 img, #container-21 img{
+#container-4 img, #container-7 img, #container-21 img, #container-16 img{
     width: 50%;
 }
 .newsDiv{
@@ -138,24 +138,24 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
-#content-1{
+.content-1{
     width: 65%;
 }
-#content-2{
+.content-2{
     width: 25%;
 }
-#newsCont{
+.newsCont{
     display: flex;
     gap: 15px;
 }
 #container-7 .newsDiv, #container-8 .newsDiv, #container-9 .newsDiv{
     background-color: #f6f6f6;
 }
-#container-8{
+#container-8, #container-17{
     display: flex;
     flex-direction: column;
 }
-#container-8 img{
+#container-8 img, #container-17 img{
     width: 40%;
 }
 
@@ -234,4 +234,87 @@
 }
 .topNews h3{
     margin-top: 10px;
+}
+.whole3{
+    width: 100%;
+    background: white;
+    margin: auto;
+}
+
+@media all and (min-width: 751px) and (max-width: 1150px) {
+    .home1, .home2, .home3{
+        width: 95%;
+    }
+    .whole1, .whole2, .whole3{
+        width: 100% ;
+    }
+    .home1{
+        grid-template-areas: 
+        'a b'
+        'c d'
+        'e f'
+    ;
+    }
+    .home2{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+    }
+    .content-1, .content-2, .content-2 iframe{
+        width: 100%;
+    }
+    .columns{
+        flex-direction: column;
+    }
+    .co1{
+        width: 100%;
+    }
+    .co2{
+        flex-direction: row;
+        width: 100%;
+    }
+}
+@media all and (min-width: 100px) and (max-width: 750px) {
+    .whole1, .whole2, .whole3{
+        width: 100% ;
+    }
+    .home1{
+        grid-template-areas: 
+        'a'
+        'b'
+        'c'
+        'd'
+        'e'
+        'f'
+    ;
+    }
+    .home2{
+        flex-direction: column;
+    }
+    .content-1, .content-2, .content-2 iframe{
+        width: 100%;
+    }
+    .newsCont{
+        flex-direction: column;
+    }
+    #bangView>p>a{
+        display: none;
+    }
+    .columns{
+        flex-direction: column;
+        width: 100%;
+    }
+    .co1{
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        'big big'
+        'a1 a2'
+         'a3 .'
+        ;
+    }
+    .co2{
+        flex-direction: row;
+        width: 100%;
+    }
 }
