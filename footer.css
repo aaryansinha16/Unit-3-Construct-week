@@ -1,5 +1,5 @@
  body{
-font-size: 20px
+font-size: 14px
 } 
 
 #footer{
@@ -81,6 +81,7 @@ font-size: 20px
     
 
 }
+
 
 #box_2 a{
     color: black;
@@ -173,7 +174,7 @@ font-size: 20px
     font-size: smaller;
 }
 
-@media  (max-width: 840px){
+@media  (max-width:750px ){
 #footer div  {
     display: inline-block;
     float: none;
@@ -212,6 +213,47 @@ font-size: 20px
     
 }
 
+.nat {
+    width: 100%;
+
+ 
+}
+.li1>li{
+    display: none;
+}
+.li2>li{
+    display: none;
+}
+.li3>li{
+    display: none;
+}
+.li4>li{
+    display: none;
+}
+.li5>li{
+    display: none;
+}
+.li6>li{
+    display: none;
+}
+.li7>li{
+    display: none;
+}
+.li8>li{
+    display: none;
+} 
+
+#all_list{
+    margin-top: 10px
+    ;
+}
+#all_list>div{
+    margin-top:-20px ;
+}
+
+#nat.show{
+    display: block;
+}
 }
 
 

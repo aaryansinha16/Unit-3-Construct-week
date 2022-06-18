@@ -3,12 +3,14 @@ function footer(){
     <div id="box_1"> 
             <div id="all_list">
                 <div id="b1">
-                    <div >
+                    <div class="nat">
                         <p style="border-bottom: 1px solid rgb(150, 181, 181) ;font-weight: bolder">
-                            <a target="_blank" href="" >NATIONAL</a>
+                            <a  target="_blank" href="" >NATIONAL 
+                            <span class="fas fa-caret-down"></span>
+                            </a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li1" style="list-style-type:none">
                        
                             <li>
                                 <a target="_blank" href="">Politics</a>
@@ -35,7 +37,7 @@ function footer(){
                             <a target="_blank" href="" >KARNATAKA</a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li2" style="list-style-type:none">
                         
                             <li>
                                 <a target="_blank" href="">Top Stories</a>
@@ -56,7 +58,7 @@ function footer(){
                             <a target="_blank" href="" >BENGALURU</a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li3" style="list-style-type:none">
                        
                             <li >
                                 <a  target="_blank" href="">Top Stories</a>
@@ -83,7 +85,7 @@ function footer(){
                             <a target="_blank" href="" >SPORTS</a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li4" style="list-style-type:none">
                         
                             <li>
                                 <a target="_blank" href="">Cricket</a>
@@ -113,7 +115,7 @@ function footer(){
                             <a target="_blank" href="" >BUSSINESS</a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li5" style="list-style-type:none">
                         
                             <li>
                                 <a target="_blank" href="">Bussiness News</a>
@@ -139,7 +141,7 @@ function footer(){
                             <a target="_blank" href="" >MULTIMEDIA</a>
                         </p>
                     </div>
-                    <div  style="list-style-type:none">
+                    <div class=li6 style="list-style-type:none">
                         
                             <li>
                                 <a target="_blank" href="">Photos</a>
@@ -158,7 +160,7 @@ function footer(){
                             <a target="_blank" href="" >OPINION</a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li7" style="list-style-type:none">
                             <li>
                                 <a target="_blank" href="">DH Views</a>
                             </li>
@@ -188,7 +190,7 @@ function footer(){
                             <a target="_blank" href="" >ENTERTAINMENT</a>
                         </p>
                     </div>
-                    <div style="list-style-type:none">
+                    <div class="li8" style="list-style-type:none">
                         
                             <li>
                                 <a target="_blank" href="">Entertainment News</a>
